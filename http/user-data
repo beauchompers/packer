@@ -1,0 +1,14 @@
+#cloud-config
+autoinstall:
+    version: 1
+    keyboard:
+    layout: en
+    variant: us
+    identity:
+      hostname: ubuntu
+      username: ubuntu
+      password: $6$E.3LG7StnEURoOWy$PTcyaJyS5HHFExctu5hWd.oH0LapJ9gXzUd62QfVDjza4rfrEy61NVLmlGE40R7eSBvWBkISvRabc2y0NQ/sy0
+    ssh:
+      install-server: true
+    late-commands:
+      - echo 'ubuntu ALL=(ALL) NOPASSWD:ALL' > /target/etc/sudoers.d/ubuntu
