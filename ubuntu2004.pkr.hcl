@@ -14,6 +14,7 @@ source "virtualbox-iso" "ubuntu-2004" {
   cpus                    = 2
   floppy_files            = ["./http/user-data", "./http/meta-data"]
   floppy_label            = "cidata"
+  format                  = "ova"
   guest_additions_path    = "VBoxGuestAdditions_{{ .Version }}.iso"
   guest_os_type           = "ubuntu-64"
   headless                = false
